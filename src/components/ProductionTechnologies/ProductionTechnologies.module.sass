@@ -1,0 +1,79 @@
+@import "../../styles/mixins"
+@import "../../styles/variables"
+
+.technologiesBlock
+  width: 1920px
+  display: flex
+  justify-content: center
+  min-height: 1100px
+  position: relative
+  h2
+    @include text-style('RFDewiExpanded', 48px, 800)
+    text-align: center
+    margin-top: 80px
+  @media (max-width: 1919px)
+    width: 1205px
+    margin: 0 auto
+  @media (max-width: 1204px)
+    min-height: 1300px
+    width: 600px
+    h2
+      @include text-style('RFDewiExpanded', 35px, 800)
+
+.content
+  width: 1125px
+  ul
+    margin-top: 80px
+    display: flex
+    justify-content: space-between
+    list-style: none
+  li
+    width: 544px
+  img
+    object-fit: cover
+    width: 544px
+    height: 316px
+  figcaption
+    @include text-style('RFDewiExpanded', 20px, 800)
+    text-align: center
+    margin-top: 20px
+    .description
+      margin-top: 20px
+      @include text-style('Inter', 16px, 400)
+  @media (max-width: 1204px)
+    width: 540px
+    img
+      width: 395px
+      height: 230px
+    ul
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+    li
+      width: 395px
+      margin-bottom: 50px
+
+.textImplementation
+  color: $primary-color-white
+  display: flex
+  flex-direction: column
+  position: absolute
+  justify-content: center
+  align-items: center
+  text-align: center
+  width: 738px
+  left: 193px
+  top: 10px
+  h2
+    @include text-style('RFDewiExpanded', 24px, 800)
+  p
+    width: 720px
+    margin-top: 20px
+    @include text-style('Inter', 16px, 400)
+  @media (max-width: 1204px)
+    width: 480px
+    left: 30px
+    top: -30px
+    p
+      margin-top: 40px
+      width: 530px

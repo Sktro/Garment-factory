@@ -1,0 +1,16 @@
+// для повторно используемого кода
+
+@mixin text-style($font-family, $font-size, $font-weight)
+  font-family: $font-family, sans-serif
+  font-size: $font-size
+  font-weight: $font-weight
+
+@mixin button-style
+  @include text-style('RFDewiExpanded', 16px, 800)
+  border: none
+  background-color: rgba(244, 223, 116, 1)
+  width: 265px
+  height: 64px
+  border-radius: 10px
+  color: black
+  cursor: pointer

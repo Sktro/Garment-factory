@@ -1,0 +1,65 @@
+@import "../../styles/mixins"
+@import "../../styles/variables"
+
+.mainBlock
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  position: relative
+  section
+    width: 1129px
+    text-align: center
+  h2
+    @include text-style('RFDewiExpanded', 48px, 800)
+    margin-top: 100px
+  p
+    @include text-style('Inter', 16px, 400)
+    width: 738px
+    margin: 30px auto
+  @media (max-width: 1919px)
+    width: 1205px
+    margin: 0 auto
+  @media (max-width: 1204px)
+    width: 600px
+    section
+      width: 560px
+    h2
+      @include text-style('RFDewiExpanded', 30px, 800)
+    p
+      width: 543px
+.price_list
+  ul
+    margin-top: 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    list-style: none
+    margin-bottom: 200px
+  figure
+    margin-bottom: 20px
+  img
+    object-fit: cover
+    width: 352px
+    height: 346px
+    @media (max-width: 1204px)
+      width: 250px
+      height: 250px
+  figcaption
+    @include text-style('RFDewiExpandedUltraLight', 18px, 400)
+    text-align: center
+
+.price
+  @include text-style('RFDewiExpandedUltraLight', 24px, 400)
+  text-align: start
+
+.descriptions
+  h2
+    @include text-style('RFDewiExpanded', 24px, 800)
+    position: absolute
+    left: 50%
+    transform: translate(-50%, -125%)
+    color: $primary-color-white
+    @media (max-width: 1204px)
+      left: 260px
+      width: 400px

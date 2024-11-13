@@ -1,0 +1,10 @@
+@import "../../styles/mixins"
+
+.heroButton
+  @include button-style
+  z-index: 2
+  &:hover
+    background-color: rgb(243, 203, 14)
+    border: grey solid 1px
+  &:active
+    background-color: rgba(244, 223, 116, 1)

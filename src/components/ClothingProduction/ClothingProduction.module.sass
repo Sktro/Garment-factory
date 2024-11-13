@@ -1,0 +1,68 @@
+@import "../../styles/mixins"
+
+
+.ClothingProductionContainer
+  width: 1920px
+  background-color: rgba(238, 238, 238, 1)
+  min-height: 1150px
+  display: flex
+  flex-direction: column
+  align-items: center
+  @media (max-width: 1919px)
+    width: 1205px
+    margin: 0 auto
+  @media (max-width: 1204px)
+    width: 600px
+
+.contentProduction
+  margin-top: 280px
+  width: 1125px
+
+  h2
+    @include text-style('RFDewiExpanded', 48px, 800)
+    text-align: center
+
+  p
+    @include text-style('Inter', 16px, 400)
+    margin: 30px auto
+    text-align: center
+    width: 738px
+
+  @media (max-width: 1204px)
+    width: 570px
+    h2
+      @include text-style('RFDewiExpanded', 35px, 800)
+    p
+      width: 540px
+
+.listProduction
+  margin-top: 50px
+
+  ul
+    display: flex
+    justify-content: space-between
+    list-style: none
+
+  li
+    width: 350px
+
+  img
+    object-fit: cover
+    width: 350px
+    height: 211px
+
+  figcaption
+    @include text-style('RFDewiExpanded', 20px, 800)
+    margin-top: 20px
+    text-align: center
+
+    .description
+      margin-top: 20px
+      @include text-style('Inter', 16px, 400)
+
+  @media (max-width: 1204px)
+    ul
+      flex-wrap: wrap
+      justify-content: center
+    li
+      margin-bottom: 60px

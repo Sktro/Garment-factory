@@ -1,0 +1,80 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.header
+  display: flex
+  justify-content: center
+  background-image: $header-bg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  width: 1920px
+  height: 677px
+  color: $primary-color-white
+  text-align: center
+  position: relative
+
+  h1
+    @include text-style('RFDewiExpanded', 60px, 800)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(17, 0, 0, 0.5)
+    z-index: 1
+
+  @media (max-width: 1919px)
+    width: 1205px
+    margin: 0 auto
+    h1
+      width: 830px
+  @media (max-width: 1204px)
+    width: 600px
+    h1
+      width: 540px
+      @include text-style('RFDewiExpanded', 35px, 800)
+
+
+.header__content
+  margin-top: 30px
+  width: 1125px
+  display: flex
+  justify-content: space-between
+  z-index: 2
+  @media (max-width: 1204px)
+    width: 560px
+    align-items: end
+
+  .header__contacts, .header__email
+    text-align: start
+    @media (max-width: 1204px)
+      margin-bottom: 30px
+
+.header__contacts_phone, .header__email_address
+  @include text-style('RFDewiExpanded', 14px, 800)
+  display: block
+.header__contacts_callback, .header__email_description
+  @include text-style('Inter', 14px, 400)
+
+.header__brand
+  position: absolute
+  top: 30px
+  left: 50%
+  transform: translateX(-50%)
+
+.header__brand_name
+  @include text-style('RFDewiExpanded', 26px, 800)
+.header__brand_description
+  @include text-style('RFDewiExpandedUltraLight', 16px, 500)
+.header_title
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+.header__button
+  margin-top: 40px
+

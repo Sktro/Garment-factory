@@ -1,0 +1,109 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.videoBlock
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding-top: 125px
+  position: absolute
+  bottom: -180px
+
+.videoContent
+  position: relative
+  img
+    object-fit: cover
+    width: 1125px
+    height: 350px
+    border-radius: 20px
+    @media (max-width: 1204px)
+      width: 540px
+
+.circle
+  width: 105px
+  height: 105px
+  background-color: rgba(255, 255, 255, 0.2)
+  border-radius: 50%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  &:hover
+    background-color: rgba(255, 255, 255, 0.3)
+  &:active
+    background-color: rgba(255, 255, 255, 0.2)
+.triangle
+  width: 31px
+  height: 33px
+  background-color: #ffffff
+  clip-path: polygon(10% 0%, 100% 50%, 10% 100%)
+  position: absolute
+  border-radius: 10px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+
+.storeBlock
+  width: 1125px
+  height: 800px
+  margin-top: 130px
+  position: absolute
+  top: 1200px
+  border-radius: 15px
+  background-color: rgba(230, 230, 230, 1)
+  overflow: hidden
+  @media (max-width: 1204px)
+    width: 540px
+    height: 1330px
+    margin: 0 auto
+    top: 1400px
+
+.storeHeader
+  height: 380px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  h2
+    margin-top: 80px
+  p
+    @include text-style('Inter', 16px, 400)
+    padding-top: 10px
+    margin: 0 auto
+
+.storeContent
+  display: flex
+  justify-content: center
+  margin-top: 20px
+  position: relative
+  img
+    object-fit: cover
+    width: 563px
+    height: 472px
+  @media (max-width: 1204px)
+    flex-wrap: wrap
+
+.store-item
+  background-color: #fff
+  overflow: hidden
+  text-align: left
+  p
+    @include text-style('RFDewiExpanded', 24px, 800)
+    position: absolute
+    padding-left: 27px
+    color: $primary-color-white
+    top: 320px
+  @media (max-width: 1204px)
+    .addressShopMSK
+      @include text-style('RFDewiExpanded', 24px, 800)
+      position: absolute
+      padding-left: 27px
+      color: $primary-color-white
+      top: 380px
+    .addressShopSPB
+      @include text-style('RFDewiExpanded', 24px, 800)
+      position: absolute
+      padding-left: 27px
+      color: $primary-color-white
+      top: 840px

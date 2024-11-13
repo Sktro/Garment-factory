@@ -1,0 +1,74 @@
+@import "../../styles/mixins"
+@import "../../styles/variables"
+
+
+.infoBlockContain
+  width: 1920px
+  text-align: center
+  display: flex
+  justify-content: center
+  position: relative
+  margin-bottom: 300px
+  h2
+    margin-bottom: 50px
+    @include text-style('RFDewiExpanded', 48px, 800)
+  p
+    margin-bottom: 50px
+    width: 740px
+  @media (max-width: 1919px)
+    width: 1205px
+    height: 1800px
+    margin: 0 auto
+    h2
+      margin-bottom: 50px
+    p
+      margin-bottom: 50px
+  @media (max-width: 1204px)
+    width: 600px
+    h2
+      width: 539px
+      margin-bottom: 50px
+      @include text-style('RFDewiExpanded', 35px, 800)
+    p
+      width: 540px
+      margin-bottom: 50px
+
+.descriptionText
+    margin-top: 73px
+    @include text-style('Inter', 16px, 400)
+    margin-bottom: 60px
+    @media (max-width: 1204px)
+      margin-top: 30px
+
+.content
+  margin-top: 50px
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 1350px
+  @media (max-width: 1919px)
+    margin-top: 50px
+  @media (max-width: 1204px)
+    margin-top: 50px
+
+.pictureSections
+  ul
+    width: 1125px
+    list-style: none
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-around
+  li
+    margin-bottom: 20px
+  img
+    object-fit: cover
+    width: 350px
+    height: 350px
+  @media (max-width: 1204px)
+    img
+      width: 250px
+      height: 250px
+    ul
+      width: 540px
+
